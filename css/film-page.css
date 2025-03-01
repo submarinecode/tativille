@@ -1,0 +1,353 @@
+/* 
+ * The World of Jacques Tati - Film Page Styles
+ * Specific styling for individual film pages with Playtime-inspired colors
+ */
+
+/* =========== FILM HERO =========== */
+.film-hero {
+    padding: 10rem 0 3rem;
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-blue) 100%);
+    color: var(--white);
+    position: relative;
+}
+
+.film-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-image: url('../images/wave-pattern.png');
+    background-size: contain;
+    background-repeat: repeat-x;
+    opacity: 0.2;
+}
+
+.film-hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.film-hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.film-hero-content h1::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: var(--primary-yellow);
+    bottom: -10px;
+    left: 25%;
+}
+
+.film-metadata {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+}
+
+/* =========== FILM MAIN CONTENT =========== */
+.film-main {
+    padding: 4rem 0;
+    background-color: var(--white);
+}
+
+.film-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* =========== FILM POSTER & NAVIGATION =========== */
+.film-poster {
+    position: sticky;
+    top: 120px;
+}
+
+.film-poster img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    margin-bottom: 1.5rem;
+}
+
+.film-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.film-navigation a {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-prev {
+    color: var(--primary-blue);
+}
+
+.nav-next {
+    color: var(--primary-blue);
+}
+
+.nav-prev:hover, .nav-next:hover {
+    background-color: var(--light-gray);
+    transform: translateY(-2px);
+}
+
+/* =========== FILM CONTENT SECTIONS =========== */
+.film-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.film-section {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--medium-gray);
+    margin-top: 0;
+}
+
+.film-section:last-child {
+    border-bottom: none;
+}
+
+.film-section h2 {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.film-section h2::after {
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 3px;
+    background-color: var(--primary-yellow);
+    bottom: -5px;
+    left: 0;
+}
+
+.film-section p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.film-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========== THEME CARDS =========== */
+.theme-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.theme-card {
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.theme-card h3 {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+/* =========== LISTS =========== */
+.film-list {
+    list-style-position: inside;
+    margin-left: 1rem;
+}
+
+.film-list li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.film-list li strong {
+    color: var(--primary-blue);
+}
+
+/* =========== TRAILER =========== */
+.trailer-container {
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    position: relative;
+    margin-top: 0.5rem;
+}
+
+.trailer-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.trailer-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-size: 1.5rem;
+    border-radius: 8px;
+}
+
+/* =========== GALLERY =========== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* =========== QUOTES =========== */
+.film-quotes {
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+blockquote {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--primary-yellow);
+}
+
+blockquote p {
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+/* =========== LIGHTBOX =========== */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 2rem;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 4px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: var(--white);
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* =========== RESPONSIVE STYLES =========== */
+@media screen and (max-width: 992px) {
+    .film-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .film-poster {
+        position: static;
+        max-width: 300px;
+        margin: 0 auto 2rem;
+    }
+    
+    .theme-grid,
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .film-hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .film-metadata {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .film-section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .theme-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-image {
+        height: 220px;
+    }
+} 
