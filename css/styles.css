@@ -412,7 +412,7 @@ footer {
 
 .footer-credits {
     font-size: 0.9rem;
-    color: var(--medium-gray);
+    color: var(--black);
 }
 
 .footer-credits p {
