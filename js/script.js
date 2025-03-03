@@ -81,28 +81,14 @@ function setupFilmCardEffects() {
     const filmCards = document.querySelectorAll('.film-card');
     
     filmCards.forEach(card => {
-        // Tilt effect on mouse move
-        card.addEventListener('mousemove', (e) => {
-            const cardRect = card.getBoundingClientRect();
-            const cardCenterX = cardRect.left + cardRect.width / 2;
-            const cardCenterY = cardRect.top + cardRect.height / 2;
-            const mouseX = e.clientX;
-            const mouseY = e.clientY;
-            
-            // Calculate the tilt angle based on mouse position relative to card center
-            const tiltX = (cardCenterY - mouseY) / 20;
-            const tiltY = (mouseX - cardCenterX) / 20;
-            
-            // Apply transform
-            card.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-10px)`;
+        // Simple hover effect without tilt
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-5px)';
         });
         
         // Reset transform on mouse leave
         card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0)';
-            setTimeout(() => {
-                card.style.transform = '';
-            }, 300);
+            card.style.transform = '';
         });
     });
 }

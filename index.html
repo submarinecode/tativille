@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The World of Jacques Tati</title>
+    <title>Tativille</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1 class="site-title">The World of Jacques Tati</h1>
+            <h1 class="site-title"><span class="tati">Tati</span><span class="ville">ville</span></h1>
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="#biography">Biography</a></li>
                     <li><a href="#filmography">Filmography</a></li>
+                    <li><a href="#biography">Biography</a></li>
                     <li><a href="#legacy">Legacy</a></li>
                     <li><a href="#resources">Resources</a></li>
                 </ul>
@@ -25,12 +25,72 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2>A Visionary of French Cinema</h2>
+                <h2>The Flaneur of French Cinema</h2>
                 <p>Exploring the whimsical world and profound social commentary of one of France's greatest filmmakers</p>
             </div>
             <div class="hero-image">
                 <!-- Portrait of Jacques Tati -->
                 <img src="https://pics.filmaffinity.com/113720741604546-nm_200.jpg" alt="Jacques Tati Portrait">
+            </div>
+        </div>
+        
+        <div id="filmography" class="container filmography-container">
+            <div class="filmography-heading">filmography</div>
+            <div class="films-row">
+                <div class="film-card">
+                    <div class="poster-container">
+                        <img src="https://www.filmspourenfants.net/wp-content/uploads/2018/04/jour-de-fete-a-353x500.jpg" alt="Jour de Fête (1949)">
+                    </div>
+                    <div class="film-info">
+                        <h3>Jour de Fête (1949)</h3>
+                        <a href="films/jour-de-fete.html" class="btn">Explore Film</a>
+                    </div>
+                </div>
+                <div class="film-card">
+                    <div class="poster-container">
+                        <img src="https://pics.filmaffinity.com/Monsieur_Hulot_s_Holiday-703095859-large.jpg" alt="Les Vacances de Monsieur Hulot (1953)">
+                    </div>
+                    <div class="film-info">
+                        <h3>Les Vacances de Monsieur Hulot (1953)</h3>
+                        <a href="films/les-vacances-de-monsieur-hulot.html" class="btn">Explore Film</a>
+                    </div>
+                </div>
+                <div class="film-card">
+                    <div class="poster-container">
+                        <img src="https://sothebys-md.brightspotcdn.com/dims4/default/4727e34/2147483647/strip/true/crop/1410x2000+0+0/resize/1024x1452!/quality/90/?url=http%3A%2F%2Fsothebys-brightspot.s3.amazonaws.com%2Fmedia-desk%2F31%2F98%2F566771634db8aeee783a3ff57e81%2Fl22899-c5mmt-cs.MONONCLE.jpg" alt="Mon Oncle (1958)">
+                    </div>
+                    <div class="film-info">
+                        <h3>Mon Oncle (1958)</h3>
+                        <a href="films/mon-oncle.html" class="btn">Explore Film</a>
+                    </div>
+                </div>
+                <div class="film-card">
+                    <div class="poster-container">
+                        <img src="https://img.rts.ch/info/culture/cinema/2019/image/oh9mtv-27740895.image?mw=1280" alt="Playtime (1967)">
+                    </div>
+                    <div class="film-info">
+                        <h3>Playtime (1967)</h3>
+                        <a href="films/playtime.html" class="btn">Explore Film</a>
+                    </div>
+                </div>
+                <div class="film-card">
+                    <div class="poster-container">
+                        <img src="https://m.media-amazon.com/images/I/51CwL4Gk0WL.jpg" alt="Trafic (1971)">
+                    </div>
+                    <div class="film-info">
+                        <h3>Trafic (1971)</h3>
+                        <a href="films/trafic.html" class="btn">Explore Film</a>
+                    </div>
+                </div>
+                <div class="film-card">
+                    <div class="poster-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/3/36/Parade_%28film%29.jpg" alt="Parade (1974)">
+                    </div>
+                    <div class="film-info">
+                        <h3>Parade (1974)</h3>
+                        <a href="films/parade.html" class="btn">Explore Film</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -47,62 +107,6 @@
                 <div class="biography-image">
                     <!-- Placeholder for Tati biography image -->
                     <img src="https://observer.com/wp-content/uploads/sites/2/2016/12/mon_oncle_hulot_arpel-large.jpg?quality=80" alt="Jacques Tati Life">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="filmography" class="filmography section">
-        <div class="container">
-            <h2>Filmography</h2>
-            <div class="films-grid">
-                <div class="film-card">
-                    <img src="https://www.filmspourenfants.net/wp-content/uploads/2018/04/jour-de-fete-a-353x500.jpg" alt="Jour de Fête (1949)">
-                    <div class="film-info">
-                        <h3>Jour de Fête (1949)</h3>
-                        <p>Tati's first feature film follows a rural postman who attempts to reform his mail delivery route after watching a film about the U.S. postal service.</p>
-                        <a href="films/jour-de-fete.html" class="btn">Explore Film</a>
-                    </div>
-                </div>
-                <div class="film-card">
-                    <img src="https://pics.filmaffinity.com/Monsieur_Hulot_s_Holiday-703095859-large.jpg" alt="Les Vacances de Monsieur Hulot (1953)">
-                    <div class="film-info">
-                        <h3>Les Vacances de Monsieur Hulot (1953)</h3>
-                        <p>Introducing Tati's most famous character, Monsieur Hulot, as he wreaks gentle havoc at a seaside resort.</p>
-                        <a href="films/les-vacances-de-monsieur-hulot.html" class="btn">Explore Film</a>
-                    </div>
-                </div>
-                <div class="film-card">
-                    <img src="https://sothebys-md.brightspotcdn.com/dims4/default/4727e34/2147483647/strip/true/crop/1410x2000+0+0/resize/1024x1452!/quality/90/?url=http%3A%2F%2Fsothebys-brightspot.s3.amazonaws.com%2Fmedia-desk%2F31%2F98%2F566771634db8aeee783a3ff57e81%2Fl22899-c5mmt-cs.MONONCLE.jpg" alt="Mon Oncle (1958)">
-                    <div class="film-info">
-                        <h3>Mon Oncle (1958)</h3>
-                        <p>Monsieur Hulot struggles with modern architecture and gadgets in his sister's ultra-modern house, contrasting with his own charming old neighborhood.</p>
-                        <a href="films/mon-oncle.html" class="btn">Explore Film</a>
-                    </div>
-                </div>
-                <div class="film-card">
-                    <img src="https://img.rts.ch/info/culture/cinema/2019/image/oh9mtv-27740895.image?mw=1280" alt="Playtime (1967)">
-                    <div class="film-info">
-                        <h3>Playtime (1967)</h3>
-                        <p>Tati's masterpiece, filmed on a massive custom-built set, follows Monsieur Hulot and a group of American tourists in a hyper-modern Paris.</p>
-                        <a href="films/playtime.html" class="btn">Explore Film</a>
-                    </div>
-                </div>
-                <div class="film-card">
-                    <img src="https://m.media-amazon.com/images/I/51CwL4Gk0WL.jpg" alt="Trafic (1971)">
-                    <div class="film-info">
-                        <h3>Trafic (1971)</h3>
-                        <p>Monsieur Hulot is a car designer traveling to an auto show in Amsterdam with a prototype vehicle, encountering various mishaps along the way.</p>
-                        <a href="films/trafic.html" class="btn">Explore Film</a>
-                    </div>
-                </div>
-                <div class="film-card">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/3/36/Parade_%28film%29.jpg" alt="Parade (1974)">
-                    <div class="film-info">
-                        <h3>Parade (1974)</h3>
-                        <p>Tati's final film, blending circus performances with cinema, returning to his music hall roots.</p>
-                        <a href="films/parade.html" class="btn">Explore Film</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -154,19 +158,18 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <h2>The World of Jacques Tati</h2>
+                    <h2><span class="tati">Tati</span><span class="ville">ville</span></h2>
                 </div>
                 <div class="footer-nav">
                     <ul>
-                        <li><a href="#biography">Biography</a></li>
                         <li><a href="#filmography">Filmography</a></li>
+                        <li><a href="#biography">Biography</a></li>
                         <li><a href="#legacy">Legacy</a></li>
                         <li><a href="#resources">Resources</a></li>
                     </ul>
                 </div>
                 <div class="footer-credits">
-                    <p>© 2023 The World of Jacques Tati. All rights reserved.</p>
-                    <p>This site is for educational purposes only. All image placeholders will be replaced with properly licensed content.</p>
+                    <p>This site was created by <a href="https://x.com/sinopill">Deng Xiaoping 2</a> and is for educational purposes only.</p>
                 </div>
             </div>
         </div>

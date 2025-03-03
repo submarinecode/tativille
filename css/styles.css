@@ -1,20 +1,19 @@
 /* 
- * The World of Jacques Tati
+ * Tativille
  * A website inspired by the visual style of Jacques Tati's films,
- * particularly the bright, vibrant colors from Playtime
+ * with a blue and red color scheme
  */
 
 /* =========== BASE STYLES =========== */
 :root {
-    /* Color palette inspired by Playtime */
-    --primary-blue: #4285F4;
-    --primary-red: #EA4335;
-    --primary-yellow: #FBBC05;
-    --primary-green: #34A853;
-    --light-blue: #8AB4F8;
-    --dark-blue: #1A73E8;
-    --light-gray: #F8F9FA;
-    --medium-gray: #DADCE0;
+    /* Updated color palette with blue and red theme */
+    --primary-color: #1E5D9E; /* Blue */
+    --secondary-color: #E63946; /* Red */
+    --accent-color: #457B9D; /* Light blue */
+    --light-accent: #F1FAEE; /* Off-white */
+    --dark-accent: #1D3557; /* Dark blue */
+    --light-gray: #F5F5F5;
+    --medium-gray: #E0E0E0;
     --dark-gray: #5F6368;
     --black: #202124;
     --white: #FFFFFF;
@@ -52,12 +51,12 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     text-decoration: none;
-    color: var(--primary-blue);
+    color: var(--secondary-color);
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: var(--dark-blue);
+    color: var(--primary-color);
 }
 
 img {
@@ -67,12 +66,12 @@ img {
 }
 
 .section {
-    padding: 5rem 0;
+    padding: 3rem 0;
 }
 
 .btn {
     display: inline-block;
-    background-color: var(--primary-blue);
+    background-color: var(--primary-color);
     color: var(--white);
     padding: 0.8rem 1.5rem;
     border-radius: 4px;
@@ -81,7 +80,7 @@ img {
 }
 
 .btn:hover {
-    background-color: var(--dark-blue);
+    background-color: var(--secondary-color);
     color: var(--white);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -89,25 +88,34 @@ img {
 
 /* =========== HEADER =========== */
 header {
-    background-color: var(--white);
+    background: linear-gradient(to right, var(--light-gray), var(--medium-gray), var(--light-gray));
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    padding: 0.5rem 0;
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 20px;
 }
 
 .site-title {
     font-size: 1.8rem;
-    color: var(--primary-blue);
     margin: 0;
+    padding: 0.5rem 0;
+    font-weight: 700;
+}
+
+.tati {
+    color: var(--primary-color); /* Blue */
+}
+
+.ville {
+    color: var(--secondary-color); /* Red */
 }
 
 .nav-menu {
@@ -132,12 +140,12 @@ header .container {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--primary-blue);
+    background-color: var(--primary-color);
     transition: width 0.3s ease;
 }
 
 .nav-menu a:hover {
-    color: var(--primary-blue);
+    color: var(--primary-color);
 }
 
 .nav-menu a:hover::after {
@@ -146,36 +154,82 @@ header .container {
 
 /* =========== HERO SECTION =========== */
 .hero {
-    padding: 10rem 0 5rem;
-    background: linear-gradient(135deg, var(--light-blue) 0%, var(--primary-blue) 100%);
-    color: var(--white);
+    background: linear-gradient(to bottom, var(--light-gray), var(--medium-gray), var(--light-gray));
+    padding-top: 5rem;
+    padding-bottom: 2rem;
 }
 
 .hero .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    gap: 3rem;
+}
+
+.hero-content {
+    max-width: 600px;
+    text-align: center;
 }
 
 .hero-content h2 {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
 }
 
 .hero-image img {
     border-radius: 8px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+}
+
+/* Filmography in Hero Section */
+.filmography-container {
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+    position: relative;
+    width: 95%;
+    max-width: 1400px;
+}
+
+.filmography-heading {
+    font-family: var(--title-font);
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+    letter-spacing: 0.1em;
+}
+
+.filmography-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+}
+
+.filmography-container h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--dark-accent);
+    font-size: 2.2rem;
 }
 
 /* =========== BIOGRAPHY SECTION =========== */
 .biography {
-    background-color: var(--white);
+    background: linear-gradient(to right, var(--light-gray), var(--medium-gray), var(--light-gray));
+    padding: 4rem 0;
 }
 
 .biography-content {
@@ -196,54 +250,89 @@ header .container {
 
 /* =========== FILMOGRAPHY SECTION =========== */
 .filmography {
-    background-color: var(--light-gray);
+    padding-top: 2rem;
 }
 
-.films-grid {
+.filmography h2 {
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.filmography .container {
+    width: 98%;
+    max-width: 1800px;
+    padding: 0 5px;
+}
+
+.films-row {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.2rem;
+    padding: 0.5rem 0 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+    background-color: transparent;
 }
 
 .film-card {
     background-color: var(--white);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    min-width: 140px;
+    max-width: 100%;
+    flex: 0 0 auto;
+    height: 100%;
 }
 
 .film-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.poster-container {
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
 }
 
 .film-card img {
     width: 100%;
-    height: 250px;
+    height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.film-card:hover img {
+    transform: scale(1.05);
 }
 
 .film-info {
-    padding: 1.5rem;
+    padding: 0.8rem;
+    text-align: center;
 }
 
 .film-info h3 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 0.8rem;
-    color: var(--primary-blue);
+    color: var(--secondary-color);
+    line-height: 1.3;
 }
 
-.film-info p {
-    margin-bottom: 1.5rem;
-    color: var(--dark-gray);
+.film-info .btn {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+    width: 100%;
 }
 
 /* =========== LEGACY SECTION =========== */
 .legacy {
-    background-color: var(--primary-blue);
-    color: var(--white);
+    background-color: var(--light-accent);
+    padding: 4rem 0;
 }
 
 .legacy-content p {
@@ -253,7 +342,8 @@ header .container {
 
 /* =========== RESOURCES SECTION =========== */
 .resources {
-    background-color: var(--white);
+    background: linear-gradient(to left, var(--light-gray), var(--medium-gray), var(--light-gray));
+    padding: 4rem 0;
 }
 
 .resources-grid {
@@ -271,9 +361,9 @@ header .container {
 }
 
 .resource-card h3 {
-    color: var(--primary-blue);
+    color: var(--secondary-color);
     margin-bottom: 1rem;
-    border-bottom: 2px solid var(--primary-yellow);
+    border-bottom: 2px solid var(--primary-color);
     padding-bottom: 0.5rem;
 }
 
@@ -288,9 +378,9 @@ header .container {
 
 /* =========== FOOTER =========== */
 footer {
-    background-color: var(--black);
-    color: var(--white);
-    padding: 4rem 0 2rem;
+    background: linear-gradient(to right, var(--light-gray), var(--medium-gray), var(--light-gray));
+    padding: 3rem 0;
+    color: var(--dark-accent);
 }
 
 .footer-content {
@@ -317,7 +407,7 @@ footer {
 }
 
 .footer-nav a:hover {
-    color: var(--primary-yellow);
+    color: var(--primary-color);
 }
 
 .footer-credits {
@@ -330,30 +420,65 @@ footer {
 }
 
 /* =========== RESPONSIVE STYLES =========== */
+@media screen and (max-width: 1400px) {
+    .films-row {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .films-row {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+    
+    .poster-container {
+        height: 180px;
+    }
+}
+
 @media screen and (max-width: 992px) {
-    .hero .container,
-    .biography-content,
-    .footer-content {
-        grid-template-columns: 1fr;
+    .biography-content {
+        flex-direction: column;
+        align-items: center;
     }
     
     .hero {
-        padding: 8rem 0 4rem;
+        padding: 4rem 0 2rem;
     }
     
-    .hero-content {
-        text-align: center;
-        margin-bottom: 2rem;
+    .hero .container {
+        flex-direction: column;
+        gap: 2rem;
     }
     
-    .films-grid {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .films-row {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+    
+    .poster-container {
+        height: 200px;
+    }
+    
+    .filmography-container {
+        margin-top: 2rem;
+    }
+    
+    .filmography-heading {
+        font-size: 3rem;
     }
 }
 
 @media screen and (max-width: 768px) {
     header .container {
         flex-direction: column;
+        padding: 1rem;
     }
     
     .site-title {
@@ -361,16 +486,31 @@ footer {
     }
     
     .nav-menu {
-        width: 100%;
         justify-content: center;
     }
     
     .nav-menu li {
-        margin: 0 1rem;
+        margin: 0 0.5rem;
     }
     
     .section {
-        padding: 3rem 0;
+        padding: 2rem 0;
+    }
+    
+    .filmography-container {
+        width: 95%;
+    }
+    
+    .filmography-container h2 {
+        font-size: 1.8rem;
+    }
+    
+    .filmography-heading {
+        font-size: 2.5rem;
+    }
+    
+    .films-row {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -380,15 +520,37 @@ footer {
     }
     
     .nav-menu li {
-        margin: 0.5rem 1rem;
+        margin: 0.3rem 0.5rem;
     }
     
     .hero-content h2 {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
     }
     
-    .films-grid,
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .films-row,
     .resources-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .filmography-container h2 {
+        font-size: 1.6rem;
+    }
+    
+    .film-card {
+        min-width: 140px;
+        max-width: 160px;
+    }
+    
+    .filmography-heading {
+        font-size: 2rem;
+    }
+    
+    .films-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
 } 

@@ -1,12 +1,12 @@
 /* 
- * The World of Jacques Tati - Film Page Styles
- * Specific styling for individual film pages with Playtime-inspired colors
+ * Tativille - Film Page Styles
+ * Specific styling for individual film pages with blue and red theme
  */
 
 /* =========== FILM HERO =========== */
 .film-hero {
-    padding: 10rem 0 3rem;
-    background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-blue) 100%);
+    padding: 7rem 0 3rem; /* Reduced from 10rem to account for thinner header */
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: var(--white);
     position: relative;
 }
@@ -41,8 +41,8 @@
     content: '';
     position: absolute;
     width: 50%;
-    height: 3px;
-    background-color: var(--primary-yellow);
+    height: 2px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     bottom: -10px;
     left: 25%;
 }
@@ -58,8 +58,8 @@
 
 /* =========== FILM MAIN CONTENT =========== */
 .film-main {
-    padding: 4rem 0;
-    background-color: var(--white);
+    padding-top: 6rem; /* Increased from 2rem to account for the fixed header height */
+    background: linear-gradient(to bottom, var(--light-gray), var(--medium-gray), var(--light-gray));
 }
 
 .film-grid {
@@ -72,7 +72,7 @@
 /* =========== FILM POSTER & NAVIGATION =========== */
 .film-poster {
     position: sticky;
-    top: 120px;
+    top: 120px; /* Increased from original value to ensure it doesn't overlap with the header */
 }
 
 .film-poster img {
@@ -118,6 +118,10 @@
 .film-section {
     padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--medium-gray);
+    margin-top: 1.5rem;
+}
+
+.film-section:first-child {
     margin-top: 0;
 }
 
@@ -127,18 +131,24 @@
 
 .film-section h2 {
     font-size: 2rem;
-    color: var(--primary-blue);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     position: relative;
     display: inline-block;
+    color: var(--primary-color);
+}
+
+.film-section:first-child h2 {
+    font-size: 2.5rem; /* Larger font size for the film title */
+    color: var(--secondary-color); /* Different color to make it stand out */
+    margin-bottom: 2rem; /* More space below the title */
 }
 
 .film-section h2::after {
     content: '';
     position: absolute;
-    width: 30%;
-    height: 3px;
-    background-color: var(--primary-yellow);
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     bottom: -5px;
     left: 0;
 }
@@ -316,8 +326,11 @@ cite {
     
     .film-poster {
         position: static;
-        max-width: 300px;
-        margin: 0 auto 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .film-main {
+        padding-top: 5rem; /* Adjusted for mobile */
     }
     
     .theme-grid,
@@ -331,6 +344,10 @@ cite {
         font-size: 2.5rem;
     }
     
+    .film-main {
+        padding-top: 4.5rem; /* Further adjusted for smaller screens */
+    }
+    
     .film-metadata {
         flex-direction: column;
         gap: 0.5rem;
@@ -338,6 +355,10 @@ cite {
     
     .film-section h2 {
         font-size: 1.8rem;
+    }
+    
+    .film-section:first-child h2 {
+        font-size: 2.2rem;
     }
 }
 
@@ -347,7 +368,11 @@ cite {
         grid-template-columns: 1fr;
     }
     
+    .film-main {
+        padding-top: 4rem; /* Adjusted for smallest screens */
+    }
+    
     .gallery-image {
-        height: 220px;
+        height: 200px;
     }
 } 
