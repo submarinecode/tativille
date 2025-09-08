@@ -155,7 +155,7 @@ header .container {
 /* =========== HERO SECTION =========== */
 .hero {
     background: linear-gradient(to bottom, var(--light-gray), var(--medium-gray), var(--light-gray));
-    padding-top: 5rem;
+    padding-top: 6rem;
     padding-bottom: 2rem;
 }
 
@@ -311,6 +311,25 @@ header .container {
     transform: scale(1.05);
 }
 
+/* Not showing state */
+.film-card.not-showing .poster-container img {
+    filter: grayscale(100%);
+    opacity: 0.6;
+}
+
+.film-card.not-showing .film-info .btn {
+    background-color: var(--medium-gray);
+    color: var(--dark-gray);
+    cursor: not-allowed;
+    pointer-events: none;
+    box-shadow: none;
+}
+
+.film-card.not-showing:hover {
+    transform: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
 .film-info {
     padding: 0.8rem;
     text-align: center;
@@ -331,7 +350,7 @@ header .container {
 
 /* =========== LEGACY SECTION =========== */
 .legacy {
-    background-color: var(--light-accent);
+    background-color: var(--light-gray);
     padding: 4rem 0;
 }
 
@@ -379,7 +398,7 @@ header .container {
 /* =========== FOOTER =========== */
 footer {
     background: linear-gradient(to right, var(--light-gray), var(--medium-gray), var(--light-gray));
-    padding: 3rem 0;
+    padding: 2rem 0;
     color: var(--dark-accent);
 }
 
@@ -445,7 +464,7 @@ footer {
     }
     
     .hero {
-        padding: 4rem 0 2rem;
+        padding: 4.5rem 0 2rem;
     }
     
     .hero .container {
